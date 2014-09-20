@@ -26,6 +26,6 @@ do
   if ! "$found"
   then
     echo "Creating link from $target to ./$src"
-    ln -s "$src" "$target"
+    ln -s "$DOTFILE_ROOT/$src" "$target"
   fi
 done
