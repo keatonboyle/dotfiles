@@ -1,0 +1,31 @@
+# see https://github.com/holman/dotfiles/blob/master/script/bootstrap
+
+# creates a symlink in $HOME to each non-excluded file in dotfiles
+
+DOTFILE_ROOT=`pwd`
+EXCLUDE_FILE=symlinkignore
+
+for src in $(ls)
+do
+  target="$HOME/.$src"
+
+  found=false
+  
+  for name in $(cat $EXCLUDE_FILE)
+  do
+    if ! "$found" 
+    then
+      if [[ $name == $src ]]
+      then 
+        echo "$name matched $src"
+        found=true
+      fi
+    fi
+  done
+
+  if ! "$found"
+  then
+    echo "Creating link from $target to ./$src"
+    ln -s "$src" "$target"
+  fi
+done
