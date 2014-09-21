@@ -1,4 +1,4 @@
-# see https://github.com/holman/dotfiles/blob/master/script/bootstrap
+# Inspired by https://github.com/holman/dotfiles/blob/master/script/bootstrap
 
 # creates a symlink in $HOME to each non-excluded file in dotfiles
 
@@ -17,7 +17,6 @@ do
     then
       if [[ $name == $src ]]
       then 
-        echo "$name matched $src"
         found=true
       fi
     fi
@@ -26,6 +25,6 @@ do
   if ! "$found"
   then
     echo "Creating link from $target to ./$src"
-    ln -s "$DOTFILE_ROOT/$src" "$target"
+    ln -svi "$DOTFILE_ROOT/$src" "$target" || true
   fi
 done
