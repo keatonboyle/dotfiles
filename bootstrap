@@ -5,9 +5,10 @@
 DOTFILE_ROOT=`pwd`
 EXCLUDE_FILE=symlinkignore
 
-for src in $(ls)
+for src in $(ls -F)
 do
-  target="$HOME/.$src"
+  # remove trailing backslash so the target will not be treated as a directory
+  target=`echo "$HOME/.$src" | sed s:/$::`
 
   found=false
   
@@ -24,7 +25,7 @@ do
 
   if ! "$found"
   then
-    echo "Creating link from $target to ./$src"
-    ln -svi "$DOTFILE_ROOT/$src" "$target" || true
+    echo "Creating link from $target to $DOTFILE_ROOT/$src"
+    ln -svihF "$DOTFILE_ROOT/$src" $target || true
   fi
 done
