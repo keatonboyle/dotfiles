@@ -7,6 +7,7 @@ set backspace=2
 set foldmethod=indent
 set foldlevel=0
 autocmd BufRead * %foldopen!
+set mouse=a
 
 " Tabs -------------------------------------------------------------------------
 set expandtab
