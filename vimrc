@@ -84,5 +84,10 @@ endfunction
 
 command Shout execute 'call Shout()'
 
+" Some autocomplete customizations ---------------------------------------------
+set completeopt-=preview
+let g:ycm_key_list_select_completion = ['<TAB>', '<DOWN>', '<Enter>']
+
 syntax on
 filetype plugin indent on 
+
