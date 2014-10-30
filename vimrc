@@ -1,17 +1,24 @@
 " Essentials -------------------------------------------------------------------
 set nocompatible
-set fileformats=unix,dos,mac
+set fileformats=unix,mac,dos
 cd $HOME
 set autochdir
 set backspace=2
 set foldmethod=indent
-set foldlevel=0
-autocmd BufRead * %foldopen!
 set mouse=a
+set incsearch
+set ignorecase
+set smartcase
+set ruler
+set wildmenu
+set wildmode=list:longest,full
+set history=500
+set autoread
 
 " Tabs -------------------------------------------------------------------------
 set expandtab
 set tabstop=2
+set softtabstop=4
 set shiftwidth=2
 
 
@@ -42,10 +49,10 @@ colorscheme wombat
 set cursorcolumn
 set cursorline
 set colorcolumn=81
-highlight StatusLine guibg=yellow guifg=black
-highlight StatusLineNC guibg=NONE guifg=white 
-highlight LineNr guibg=NONE
-highlight VertSplit guibg=NONE guifg=white
+autocmd ColorScheme * highlight StatusLine ctermbg=yellow ctermfg=black guibg=yellow guifg=black
+autocmd ColorScheme * highlight StatusLineNC guibg=NONE guifg=white 
+autocmd ColorScheme * highlight LineNr guibg=NONE
+autocmd ColorScheme * highlight VertSplit guibg=NONE guifg=white
 set fillchars=vert:\|,stl:-,stlnc:-
 if has( 'gui_running' )
 	set guifont=Consolas:h8:cANSI
