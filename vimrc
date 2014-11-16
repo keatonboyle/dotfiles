@@ -96,6 +96,11 @@ command Shout execute 'call Shout()'
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 
+" Ultisnips
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
 " Some autocomplete customizations ---------------------------------------------
 set completeopt-=preview
 let g:ycm_key_list_select_completion = ['<TAB>', '<DOWN>']

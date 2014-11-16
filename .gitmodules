@@ -29,3 +29,9 @@
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = http://github.com/scrooloose/syntastic
+[submodule "vim/bundle/ultisnips"]
+	path = vim/bundle/ultisnips
+	url = http://github.com/SirVer/ultisnips
+[submodule "vim/bundle/vim-snippets"]
+	path = vim/bundle/vim-snippets
+	url = http://github.com/honza/vim-snippets
