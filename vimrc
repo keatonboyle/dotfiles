@@ -5,6 +5,7 @@ cd $HOME
 set autochdir
 set backspace=2
 set foldmethod=indent
+set foldlevel=99
 set mouse=a
 set incsearch
 set ignorecase
@@ -91,9 +92,13 @@ endfunction
 
 command Shout execute 'call Shout()'
 
+" Syntastic
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
+
 " Some autocomplete customizations ---------------------------------------------
 set completeopt-=preview
-let g:ycm_key_list_select_completion = ['<TAB>', '<DOWN>', '<Enter>']
+let g:ycm_key_list_select_completion = ['<TAB>', '<DOWN>']
 
 syntax on
 filetype plugin indent on 

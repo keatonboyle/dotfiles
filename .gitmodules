@@ -26,3 +26,6 @@
 [submodule "vim/bundle/tern_for_vim"]
 	path = vim/bundle/tern_for_vim
 	url = git://github.com/marijnh/tern_for_vim
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = http://github.com/scrooloose/syntastic
