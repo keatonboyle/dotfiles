@@ -1,5 +1,5 @@
-Adding new vim plugin
+# Adding new vim plugin
 
 cd vim/bundle
 
-git clone <reporepo.git>
+git submodule add <reporepo.git>
