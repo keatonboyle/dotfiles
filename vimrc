@@ -101,9 +101,16 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
+" vim-go
+let g:go_fmt_command = "goimports"
+
 " Some autocomplete customizations ---------------------------------------------
 set completeopt-=preview
 let g:ycm_key_list_select_completion = ['<TAB>', '<DOWN>']
+
+" Autoformat on save
+au BufWrite * :Autoformat
+
 
 syntax on
 filetype plugin indent on
