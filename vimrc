@@ -51,20 +51,20 @@ set cursorcolumn
 set cursorline
 set colorcolumn=81
 autocmd ColorScheme * highlight StatusLine ctermbg=yellow ctermfg=black guibg=yellow guifg=black
-autocmd ColorScheme * highlight StatusLineNC guibg=NONE guifg=white 
+autocmd ColorScheme * highlight StatusLineNC guibg=NONE guifg=white
 autocmd ColorScheme * highlight LineNr guibg=NONE
 autocmd ColorScheme * highlight VertSplit guibg=NONE guifg=white
 set fillchars=vert:\|,stl:-,stlnc:-
 if has( 'gui_running' )
-	set guifont=Consolas:h8:cANSI
-	set guioptions-=m
-	set guioptions-=T
+  set guifont=Consolas:h8:cANSI
+  set guioptions-=m
+  set guioptions-=T
 endif
 
 
 " Movement ---------------------------------------------------------------------
 " In all modes except insert, use visual line movement as opposed to actual
-"  line break movement.  The <Plug> stuff is necessary for compatibility 
+"  line break movement.  The <Plug> stuff is necessary for compatibility
 "  with Arpeggio
 inoremap <Plug>(arpeggio-default:j) j
 vnoremap <Plug>(arpeggio-default:j) gj
@@ -82,12 +82,12 @@ call arpeggio#map('n', '', 0, 'jk', '<Esc>')
 
 " Functions for sizing ---------------------------------------------------------
 function Shout()
-    set guifont=consolas:h50:cANSI
-    set lines=3
-    set columns=40
-    set tw=40
-    set nonumber
-    set noshowmode
+  set guifont=consolas:h50:cANSI
+  set lines=3
+  set columns=40
+  set tw=40
+  set nonumber
+  set noshowmode
 endfunction
 
 command Shout execute 'call Shout()'
@@ -106,5 +106,5 @@ set completeopt-=preview
 let g:ycm_key_list_select_completion = ['<TAB>', '<DOWN>']
 
 syntax on
-filetype plugin indent on 
+filetype plugin indent on
 
